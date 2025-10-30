@@ -16,7 +16,8 @@ class OnlineShoppingApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "Lato",
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromRGBO(100, 255, 218, 1),
+          seedColor: const Color.fromARGB(255, 95, 245, 210),
+          primary: const Color.fromARGB(255, 95, 245, 210),
           ),
           inputDecorationTheme: const InputDecorationTheme(
             hintStyle: TextStyle(
