@@ -26,6 +26,16 @@ class OnlineShoppingApp extends StatelessWidget {
             ),
             prefixIconColor: Color.fromRGBO(82, 82, 82, 1),
           ),
+          textTheme: const TextTheme(
+            titleMedium: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20
+            ),
+            titleSmall: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            )
+          )
       ),
       
       home: Shoppingscreen(),

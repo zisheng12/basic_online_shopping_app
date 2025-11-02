@@ -1,3 +1,5 @@
+import 'package:basic_online_shopping_app/global_variables.dart';
+import 'package:basic_online_shopping_app/product_card.dart';
 import 'package:flutter/material.dart';
 
 class Shoppingscreen extends StatefulWidget {
@@ -72,7 +74,7 @@ class _ShoppingscreenState extends State<Shoppingscreen> {
               ],
             ),
             SizedBox(
-              height: 120,
+              height: 95,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                     itemCount: companies.length,
@@ -102,6 +104,17 @@ class _ShoppingscreenState extends State<Shoppingscreen> {
                     },
                     ),
             ),
+
+             Expanded(
+               child: ListView.builder(
+                itemCount: products.length,
+                itemBuilder:(context, index) {
+                  final product = products[index];
+                  return productcard(title: product["title"] as String, price: product["price"] as double,image: product['imageurl'] as String,);
+                },
+                ),
+             ),
+
           ],
         ),
       ),
