@@ -35,12 +35,10 @@ class _ShoppingscreenState extends State<Shoppingscreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(20.0),
-                  child: const Text(
+                  child: Text(
                     "Shoes\nCollection" , 
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
-                    ),),
+                    style: Theme.of(context).textTheme.titleLarge
+                  ),
                 ),
 
                 Expanded(child: TextField(
@@ -110,7 +108,8 @@ class _ShoppingscreenState extends State<Shoppingscreen> {
                 itemCount: products.length,
                 itemBuilder:(context, index) {
                   final product = products[index];
-                  return productcard(title: product["title"] as String, price: product["price"] as double,image: product['imageurl'] as String,);
+                  return productcard(title: product["title"] as String, price: product["price"] as double,image: product["imageurl"] as String,
+                  backgroundcolor: index.isEven ? const Color.fromARGB(255, 215, 238, 235) :  const Color.fromARGB(255, 226, 225, 241),);
                 },
                 ),
              ),

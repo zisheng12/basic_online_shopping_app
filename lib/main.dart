@@ -1,4 +1,5 @@
-import 'package:basic_online_shopping_app/shoppingScreen.dart';
+import 'package:basic_online_shopping_app/global_variables.dart';
+import 'package:basic_online_shopping_app/product_details_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -34,11 +35,23 @@ class OnlineShoppingApp extends StatelessWidget {
             titleSmall: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 16,
-            )
-          )
+            ),
+            titleLarge: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
+                    ),
+          ),
+          appBarTheme: AppBarTheme(
+            titleTextStyle: TextStyle(
+              fontSize: 20,
+              color: Colors.black,
+            ),
+          ),
       ),
       
-      home: Shoppingscreen(),
+      home: ProductDetailsPage(
+        product: products[0],
+      ),
     );
   }
 }
